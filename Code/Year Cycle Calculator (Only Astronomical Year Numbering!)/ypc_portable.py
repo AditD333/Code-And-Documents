@@ -664,25 +664,30 @@ def menu4():
 		
 		if sel == '1': # If user wants to check the calendar manually then user just enter the year and the user desired first day of the week
 			w = int(input("\nEnter Year >> "))
-			d = input("\nEnter Starting day of the week! MONDAY = 1 to SUNDAY = 7 >> ")
+			print("0 = Saturday, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday")
+			d = input("\nEnter Starting day of the week! >> ")
 			
-			# If user entered 1 as the starting day of the week, the calendar will have the first day of the week as Monday, 2 for Tuesday, 3 for Wednesday, and so on until 7 for Sunday.
-			if d == '1':
-				c = calendar.setfirstweekday(calendar.MONDAY)
-			elif d == '2':
-				c = calendar.setfirstweekday(calendar.TUESDAY)
-			elif d == '3':
-				c = calendar.setfirstweekday(calendar.WEDNESDAY)
-			elif d == '4':
-				c = calendar.setfirstweekday(calendar.THURSDAY)
-			elif d == '5':
-				c = calendar.setfirstweekday(calendar.FRIDAY)
-			elif d == '6':
+			# If user entered 0 as the starting day of the week, the calendar will have the first day of the week as Saturday, 1 for Sunday, 2 for Monday, and so on until 6 for Friday.
+
+			#This also aligned with its 1st January of the origin year , year 0 , which falls on Saturday
+
+			if d == '0':
 				c = calendar.setfirstweekday(calendar.SATURDAY)
-			elif d == '7':
+			elif d == '1':
 				c = calendar.setfirstweekday(calendar.SUNDAY)
+			elif d == '2':
+				c = calendar.setfirstweekday(calendar.MONDAY)
+			elif d == '3':
+				c = calendar.setfirstweekday(calendar.TUESDAY)
+			elif d == '4':
+				c = calendar.setfirstweekday(calendar.WEDNESDAY)
+			elif d == '5':
+				c = calendar.setfirstweekday(calendar.THURSDAY)
+			elif d == '6':
+				c = calendar.setfirstweekday(calendar.FRIDAY)
 			else: # If the first day of the week is out of range from 1 to 7, than prompt if user wants to try again or not
-				print("1 - 7 Only!")
+				print("\n")
+				print("0 - 6 Only!")
 				choice2 = input("\nTry Again? (y[for repeat] / any key to main menu) >> ")
 				if choice2 == 'y':
 					menu4()
@@ -728,27 +733,29 @@ def menu4():
 			print("\n\nThe year is ",res,"!")
 			print("(Ordinalized as Year No.",res+1,")")
 
+			print("0 = Saturday, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday")
+			d = input("\nEnter Starting day of the week! >> ")
+			# If user entered 0 as the starting day of the week, the calendar will have the first day of the week as Saturday, 1 for Sunday, 2 for Monday, and so on until 6 for Friday.
+
+			#This also aligned with its 1st January of the origin year , year 0 , which falls on Saturday 
 			
-			d = input("\nEnter Starting day of the week! MONDAY = 1 to SUNDAY = 7 >> ")
-			# If user entered 1 as the starting day of the week, the calendar will have the first day of the week as Monday, 2 for Tuesday, 3 for Wednesday, and so on until 7 for Sunday. 
-			
-			if d == '1':
-				c = calendar.setfirstweekday(calendar.MONDAY)
-			elif d == '2':
-				c = calendar.setfirstweekday(calendar.TUESDAY)
-			elif d == '3':
-				c = calendar.setfirstweekday(calendar.WEDNESDAY)
-			elif d == '4':
-				c = calendar.setfirstweekday(calendar.THURSDAY)
-			elif d == '5':
-				c = calendar.setfirstweekday(calendar.FRIDAY)
-			elif d == '6':
+			if d == '0':
 				c = calendar.setfirstweekday(calendar.SATURDAY)
-			elif d == '7':
+			elif d == '1':
 				c = calendar.setfirstweekday(calendar.SUNDAY)
+			elif d == '2':
+				c = calendar.setfirstweekday(calendar.MONDAY)
+			elif d == '3':
+				c = calendar.setfirstweekday(calendar.TUESDAY)
+			elif d == '4':
+				c = calendar.setfirstweekday(calendar.WEDNESDAY)
+			elif d == '5':
+				c = calendar.setfirstweekday(calendar.THURSDAY)
+			elif d == '6':
+				c = calendar.setfirstweekday(calendar.FRIDAY)
 			else: # If the first day of the week is out of range from 1 to 7, than prompt if user wants to try again or not
 				print("\n")
-				print("1 - 7 Only!")
+				print("0 - 6 Only!")
 				choice2 = input("\nTry Again? (y[for repeat] / any key to main menu) >> ")
 				if choice2 == 'y':
 					menu4()
@@ -1912,6 +1919,7 @@ def ext3():
 				ext3()
 			else:
 				main()
+
 
 
 	except: # If user input is not number or no input given
