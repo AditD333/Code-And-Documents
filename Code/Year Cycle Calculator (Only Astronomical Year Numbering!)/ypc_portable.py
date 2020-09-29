@@ -664,7 +664,7 @@ def menu4():
 		
 		if sel == '1': # If user wants to check the calendar manually then user just enter the year and the user desired first day of the week
 			w = int(input("\nEnter Year >> "))
-			print("0 = Saturday, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday")
+			print("\n\n0 = Saturday, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday")
 			d = input("\nEnter Starting day of the week! >> ")
 			
 			# If user entered 0 as the starting day of the week, the calendar will have the first day of the week as Saturday, 1 for Sunday, 2 for Monday, and so on until 6 for Friday.
@@ -733,7 +733,7 @@ def menu4():
 			print("\n\nThe year is ",res,"!")
 			print("(Ordinalized as Year No.",res+1,")")
 
-			print("0 = Saturday, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday")
+			print("\n\n0 = Saturday, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday")
 			d = input("\nEnter Starting day of the week! >> ")
 			# If user entered 0 as the starting day of the week, the calendar will have the first day of the week as Saturday, 1 for Sunday, 2 for Monday, and so on until 6 for Friday.
 
